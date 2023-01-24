@@ -1,12 +1,19 @@
 export default function initFecthBitcoin() {
-  fetch("https://www.blockchain.com/ticker")
-  .then((response) => response.json())
-  .then(bitcoin => {
-    const btcPreco = document.querySelector(".btc-preco");
-    btcPreco.innerText = (100 / bitcoin.BRL.buy).toFixed(5);
-  }).catch((error) => {
-    console.log(Error(error));
-  })
+  async function fetchBtc() {
+    try {
+      const btcResponse = await fetch("https://www.blockchain.com/ticker");
+      const btcValues = await btcResponse.json();
+      const donateRealValue = 100;
+      const btcBRLDonate = (donateRealValue / btcValues.BRL.buy).toFixed(5);
+      const btcPreco = document.querySelector(".btc-preco");
+
+      btcPreco.innerText = btcBRLDonate;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  fetchBtc();
 }
 
 initFecthBitcoin();
