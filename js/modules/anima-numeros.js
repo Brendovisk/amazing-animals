@@ -29,5 +29,3 @@ export default function initAnimaNumeros() {
   const observer = new MutationObserver(handleMutation);
   observer.observe(observerTarget, { attributes: true });
 }
-
-initAnimaNumeros();
