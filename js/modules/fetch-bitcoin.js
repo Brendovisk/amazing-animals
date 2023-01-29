@@ -1,4 +1,4 @@
-export default function initFecthBitcoin() {
+export default function e() {
   async function fetchBtc() {
     try {
       const btcResponse = await fetch("https://www.blockchain.com/ticker");
@@ -9,11 +9,10 @@ export default function initFecthBitcoin() {
 
       btcPreco.innerText = btcBRLDonate;
     } catch (error) {
+      // eslint-disable-next-line no-console
       console.log(error);
     }
   }
 
   fetchBtc();
 }
-
-initFecthBitcoin();

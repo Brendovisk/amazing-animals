@@ -1,11 +1,25 @@
-import "./modules/tabNav.js"
-import "./modules/accordion.js"
-import "./modules/scroll-animacao.js"
-import "./modules/scroll-suave.js"
-import "./modules/modal.js"
-import "./modules/tooltip.js"
-import "./modules/dropdown.js"
-import "./modules/menu-mobile.js"
-import "./modules/funcionamento.js"
-import "./modules/fetch-animais.js"
-import "./modules/fetch-bitcoin.js"
+import initAnimaNumeros from "./modules/anima-numeros.js";
+import initAccordion from "./modules/accordion.js";
+import initDropdown from "./modules/dropdown.js";
+import initFetchAnimais from "./modules/fetch-animais.js";
+import initFetchBitcoin from "./modules/fetch-bitcoin.js";
+import initFuncionamento from "./modules/funcionamento.js";
+import initMenuMobile from "./modules/menu-mobile.js";
+import initModal from "./modules/modal.js";
+import initAnimacaoScroll from "./modules/scroll-animacao.js";
+import initScrollSuave from "./modules/scroll-suave.js";
+import initTabNav from "./modules/tabNav.js";
+import initTooltip from "./modules/tooltip.js";
+
+initAccordion();
+initDropdown();
+initAnimaNumeros();
+initFetchAnimais();
+initFetchBitcoin();
+initFuncionamento();
+initMenuMobile();
+initModal();
+initAnimacaoScroll();
+initScrollSuave();
+initTabNav();
+initTooltip();
