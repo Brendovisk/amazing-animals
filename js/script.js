@@ -7,9 +7,12 @@ import initFuncionamento from "./modules/funcionamento";
 import initMenuMobile from "./modules/menu-mobile";
 import initModal from "./modules/modal";
 import initAnimacaoScroll from "./modules/scroll-animacao";
-import initScrollSuave from "./modules/scroll-suave";
+import SmoothScroll from "./modules/smooth-scroll";
 import initTabNav from "./modules/tabNav";
 import initTooltip from "./modules/tooltip";
+
+const smoothScroll = new SmoothScroll("[data-menu='smooth'] a[href^='#']");
+smoothScroll.init();
 
 initAccordion();
 initDropdown();
@@ -20,6 +23,5 @@ initFuncionamento();
 initMenuMobile();
 initModal();
 initAnimacaoScroll();
-initScrollSuave();
 initTabNav();
 initTooltip();
