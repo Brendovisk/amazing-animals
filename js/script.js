@@ -8,14 +8,16 @@ import initMenuMobile from "./modules/menu-mobile";
 import initModal from "./modules/modal";
 import initAnimacaoScroll from "./modules/scroll-animacao";
 import SmoothScroll from "./modules/smooth-scroll";
-import initTabNav from "./modules/tabNav";
+import TabNav from "./modules/tabNav";
 import initTooltip from "./modules/tooltip";
 
 const smoothScroll = new SmoothScroll("[data-menu='smooth'] a[href^='#']");
 const accordion = new Accordion("[data-anime='accordion'] dt");
+const tabNav = new TabNav("[data-tab='menu'] li", "[data-tab='content'] section");
 
 accordion.init();
 smoothScroll.init();
+tabNav.init();
 
 initDropdown();
 initAnimaNumeros();
@@ -25,5 +27,4 @@ initFuncionamento();
 initMenuMobile();
 initModal();
 initAnimacaoScroll();
-initTabNav();
 initTooltip();
