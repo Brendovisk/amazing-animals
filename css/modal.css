@@ -11,7 +11,7 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal-container.ativo {
+.modal-container.active {
   display: flex;
 }
 
@@ -35,11 +35,11 @@
   }
 }
 
-.ativo .modal {
-    animation: modal .3s forwards;
+.active .modal {
+  animation: modal 0.3s forwards;
 }
 
-.fechar {
+.close {
   position: absolute;
   top: -30px;
   right: -30px;
