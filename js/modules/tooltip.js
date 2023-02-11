@@ -1,6 +1,6 @@
 export default class Tooltip {
-  constructor() {
-    this.tooltips = document.querySelectorAll("[data-tooltip]");
+  constructor(element) {
+    this.tooltips = document.querySelectorAll(element);
 
     // object bind to callback
     this.onMouseLeave = this.onMouseLeave.bind(this);
