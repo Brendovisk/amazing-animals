@@ -1,4 +1,3 @@
-import initAnimaNumeros from "./modules/anima-numeros";
 import Accordion from "./modules/accordion";
 import initDropdown from "./modules/dropdown";
 import initFetchAnimais from "./modules/fetch-animais";
@@ -15,7 +14,7 @@ const smoothScroll = new SmoothScroll("[data-menu='smooth'] a[href^='#']");
 const accordion = new Accordion("[data-anime='accordion'] dt");
 const tabNav = new TabNav("[data-tab='menu'] li", "[data-tab='content'] section");
 const modal = new Modal("[data-modal='open']", "[data-modal='close']", "[data-modal='container']");
-const tooltip = new Tooltip();
+const tooltip = new Tooltip("[data-tooltip]");
 
 accordion.init();
 smoothScroll.init();
@@ -24,7 +23,6 @@ modal.init();
 tooltip.init();
 
 initDropdown();
-initAnimaNumeros();
 initFetchAnimais();
 initFetchBitcoin();
 initFuncionamento();
