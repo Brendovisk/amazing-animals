@@ -1,4 +1,3 @@
-import initDropdown from "./modules/dropdown";
 import initFuncionamento from "./modules/funcionamento";
 import initMenuMobile from "./modules/menu-mobile";
 
@@ -8,6 +7,7 @@ import TabNav from "./modules/tabNav";
 import Modal from "./modules/modal";
 import Tooltip from "./modules/tooltip";
 import ScrollAnimation from "./modules/scroll-animation";
+import Dropdown from "./modules/dropdown";
 
 import fetchAnimals from "./modules/fetch-animais";
 import fetchBitcoin from "./modules/fetch-bitcoin";
@@ -18,6 +18,7 @@ const tabNav = new TabNav("[data-tab='menu'] li", "[data-tab='content'] section"
 const modal = new Modal("[data-modal='open']", "[data-modal='close']", "[data-modal='container']");
 const tooltip = new Tooltip("[data-tooltip]");
 const scrollAnimation = new ScrollAnimation("[data-anime='scroll']");
+const dropdown = new Dropdown("[data-dropdown]");
 
 smoothScroll.init();
 accordion.init();
@@ -25,8 +26,8 @@ tabNav.init();
 modal.init();
 tooltip.init();
 scrollAnimation.init();
+dropdown.init();
 
-initDropdown();
 initFuncionamento();
 initMenuMobile();
 
