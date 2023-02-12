@@ -1,5 +1,3 @@
-import initFuncionamento from "./modules/funcionamento";
-
 import SmoothScroll from "./modules/smooth-scroll";
 import Accordion from "./modules/accordion";
 import TabNav from "./modules/tabNav";
@@ -8,6 +6,7 @@ import Tooltip from "./modules/tooltip";
 import ScrollAnimation from "./modules/scroll-animation";
 import Dropdown from "./modules/dropdown";
 import MenuMobile from "./modules/menu-mobile";
+import BusinessHours from "./modules/business-hours";
 
 import fetchAnimals from "./modules/fetch-animais";
 import fetchBitcoin from "./modules/fetch-bitcoin";
@@ -20,6 +19,7 @@ const tooltip = new Tooltip("[data-tooltip]");
 const scrollAnimation = new ScrollAnimation("[data-anime='scroll']");
 const dropdown = new Dropdown("[data-dropdown]");
 const menuMobile = new MenuMobile("[data-menu='button']", "[data-menu='list']");
+const businessHours = new BusinessHours("[data-semana]", "aberto");
 
 smoothScroll.init();
 accordion.init();
@@ -29,8 +29,7 @@ tooltip.init();
 scrollAnimation.init();
 dropdown.init();
 menuMobile.init();
-
-initFuncionamento();
+businessHours.init();
 
 fetchAnimals("../../animaisapi.json", ".numeros-grid");
 fetchBitcoin("https://www.blockchain.com/ticker", ".btc-preco");
