@@ -1,6 +1,8 @@
 import AnimateNumbers from "./animate-numbers";
 
-export default function initFetchAnimais() {
+export default function fetchAnimals(url, target) {
+  const numerosGrid = document.querySelector(target);
+
   function createAnimal(animal) {
     const div = document.createElement("div");
     div.classList.add("numero-animal");
@@ -11,23 +13,27 @@ export default function initFetchAnimais() {
     return div;
   }
 
-  async function fetchAnimais(url) {
+  function fillAnimals(animal) {
+    const divAnimal = createAnimal(animal);
+    numerosGrid.appendChild(divAnimal);
+  }
+
+  function animateAnimalNumbers() {
+    const animateNumbers = new AnimateNumbers("[data-numero]", ".numeros", "ativo");
+    animateNumbers.init();
+  }
+
+  async function createAnimals() {
     try {
       const animaisResponse = await fetch(url);
       const animaisJson = await animaisResponse.json();
-      const numerosGrid = document.querySelector(".numeros-grid");
-
-      animaisJson.forEach((animal) => {
-        const divAnimal = createAnimal(animal);
-        numerosGrid.appendChild(divAnimal);
-      });
-      const animateNumbers = new AnimateNumbers("[data-numero]", ".numeros", "ativo");
-      animateNumbers.init();
+      animaisJson.forEach((animal) => fillAnimals(animal));
+      animateAnimalNumbers();
     } catch (error) {
       // eslint-disable-next-line no-console
       console.log(error);
     }
   }
 
-  fetchAnimais("./animaisapi.json");
+  return createAnimals();
 }

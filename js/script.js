@@ -1,6 +1,6 @@
 import Accordion from "./modules/accordion";
 import initDropdown from "./modules/dropdown";
-import initFetchAnimais from "./modules/fetch-animais";
+import fetchAnimals from "./modules/fetch-animais";
 import initFetchBitcoin from "./modules/fetch-bitcoin";
 import initFuncionamento from "./modules/funcionamento";
 import initMenuMobile from "./modules/menu-mobile";
@@ -23,7 +23,7 @@ modal.init();
 tooltip.init();
 
 initDropdown();
-initFetchAnimais();
+fetchAnimals("../../animaisapi.json", ".numeros-grid");
 initFetchBitcoin();
 initFuncionamento();
 initMenuMobile();
