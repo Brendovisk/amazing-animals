@@ -9,6 +9,8 @@
   height: 100vh;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .modal-container.active {
@@ -21,7 +23,8 @@
   border: 10px solid #fb5;
   box-shadow: 0 0 0 10px #fff;
   position: relative;
-  min-width: 300px;
+  max-width: 300px;
+  width: 100%;
 }
 
 @keyframes modal {
@@ -49,9 +52,9 @@
   border-radius: 50%;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
   background-color: #e54;
-  font-size: 1.2rem;
-  color: #fff;
-  font-family: "IBM Plex Mono", monospace;
+  background-image: url(../img/fechar.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   cursor: pointer;
 }
 
@@ -65,6 +68,9 @@
 .modal input {
   width: 100%;
   padding: 0.7rem 0.5rem;
+  border: 2px solid #222;
+  border-radius: 0px;
+  margin-top: 0.5rem;
 }
 
 .modal button[type="submit"] {
