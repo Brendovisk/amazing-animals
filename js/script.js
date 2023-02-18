@@ -7,6 +7,7 @@ import ScrollAnimation from "./modules/scroll-animation";
 import Dropdown from "./modules/dropdown";
 import MenuMobile from "./modules/menu-mobile";
 import BusinessHours from "./modules/business-hours";
+import { SlideNav } from "./modules/slide";
 
 import fetchAnimals from "./modules/fetch-animais";
 import fetchBitcoin from "./modules/fetch-bitcoin";
@@ -20,6 +21,7 @@ const scrollAnimation = new ScrollAnimation("[data-anime='scroll']");
 const dropdown = new Dropdown("[data-dropdown]");
 const menuMobile = new MenuMobile("[data-menu='button']", "[data-menu='list']");
 const businessHours = new BusinessHours("[data-semana]", "aberto");
+const slide = new SlideNav(".slide", ".slide-wrapper");
 
 smoothScroll.init();
 accordion.init();
@@ -30,6 +32,8 @@ scrollAnimation.init();
 dropdown.init();
 menuMobile.init();
 businessHours.init();
+slide.init();
+slide.addControl(".custom-controls");
 
 fetchAnimals("../../animaisapi.json", ".numeros-grid");
 fetchBitcoin("https://www.blockchain.com/ticker", ".btc-preco");

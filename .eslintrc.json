@@ -13,6 +13,7 @@
     "semi": ["error", "always"],
     "quotes": ["error", "double"],
     "no-param-reassign": 0,
-    "max-len": 0
+    "max-len": 0,
+    "max-classes-per-file": 0
   }
 }
