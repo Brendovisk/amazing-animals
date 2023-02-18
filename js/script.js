@@ -35,5 +35,5 @@ businessHours.init();
 slide.init();
 slide.addControl(".custom-controls");
 
-fetchAnimals("../animaisapi.json", ".numeros-grid");
+fetchAnimals("./animaisapi.json", ".numeros-grid");
 fetchBitcoin("https://www.blockchain.com/ticker", ".btc-preco");
